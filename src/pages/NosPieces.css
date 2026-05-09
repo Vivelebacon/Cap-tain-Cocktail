@@ -1,0 +1,114 @@
+.pieces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.pieces-grid__item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--cream-dark);
+}
+
+.pieces-grid__item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.pieces-grid__item:hover img { transform: scale(1.05); }
+
+.pieces-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.pieces-cat {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pieces-cat:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pieces-cat__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.pieces-cat__name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--brown);
+  line-height: 1.1;
+}
+
+.pieces-cat__desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pieces-info-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pieces-info-card {
+  background: var(--brown);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pieces-info-card--light {
+  background: var(--orange);
+}
+
+.pieces-info-card__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.pieces-info-card__value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1;
+}
+
+.pieces-info-card__sub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+}
+
+@media (max-width: 900px) {
+  .pieces-categories { grid-template-columns: repeat(2, 1fr); }
+  .pieces-grid { grid-template-columns: repeat(2, 1fr); }
+  .pieces-info-bar { grid-template-columns: 1fr; }
+}

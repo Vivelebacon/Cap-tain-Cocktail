@@ -1,0 +1,170 @@
+.devis-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.devis-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.devis-sidebar-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.devis-sidebar-card--dark {
+  background: var(--brown);
+}
+
+.devis-sidebar-card__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+.devis-sidebar-card--dark .devis-sidebar-card__label { color: rgba(255,255,255,0.4); }
+
+.devis-sidebar-card__title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--brown);
+  line-height: 1;
+}
+.devis-sidebar-card--dark .devis-sidebar-card__title { color: white; }
+
+.devis-sidebar-card__sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.devis-sidebar-card--dark .devis-sidebar-card__sub { color: rgba(255,255,255,0.5); }
+
+.devis-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.devis-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--brown-mid);
+}
+
+.devis-checklist-item__dot {
+  width: 8px; height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.devis-formules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.devis-formule-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--cream-dark);
+  font-size: 0.88rem;
+}
+.devis-formule-row:last-child { border-bottom: none; }
+
+.devis-formule-row__name {
+  font-weight: 700;
+  color: var(--brown);
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+}
+
+.devis-formule-row__price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--orange);
+}
+
+/* Form card */
+.devis-form-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.devis-form-card h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+
+.devis-form-card > p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* Success */
+.devis-success {
+  text-align: center;
+  padding: 64px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.devis-success__mark {
+  width: 64px; height: 64px;
+  background: var(--brown);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.devis-success h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+.devis-success p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .devis-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,158 @@
+.avis-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.avis-big-card {
+  background: var(--brown);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+}
+
+.avis-big-card__label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 8px;
+}
+
+.avis-big-card__score {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.avis-big-card__stars {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.avis-star {
+  width: 18px; height: 18px;
+  background: #F5A623;
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  flex-shrink: 0;
+}
+
+.avis-big-card__sub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+}
+
+.avis-rating-img-card {
+  background: var(--orange);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  min-height: 260px;
+}
+
+.avis-rating-img-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.avis-card {
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-top: 3px solid var(--orange);
+}
+
+.avis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.avis-card__stars {
+  display: flex;
+  gap: 3px;
+}
+
+.avis-card__text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  flex: 1;
+  font-style: italic;
+}
+
+.avis-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.avis-card__name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brown);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.avis-card__type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.avis-cta-bar {
+  background: var(--brown);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.avis-cta-bar h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.avis-cta-bar p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+}
+
+@media (max-width: 900px) {
+  .avis-hero-grid { grid-template-columns: 1fr; }
+  .avis-rating-img-card { min-height: 200px; }
+  .avis-grid { grid-template-columns: 1fr; }
+  .avis-cta-bar { grid-template-columns: 1fr; padding: 32px; }
+}
