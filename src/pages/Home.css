@@ -335,6 +335,8 @@
   justify-content: flex-end;
   padding: 32px;
   transition: transform 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .formula-card:hover { transform: translateY(-4px); }

@@ -118,7 +118,7 @@ export default function Home() {
           <Link to="/nos-pieces" className="btn btn-outline">Voir toutes les pièces</Link>
         </div>
         <div className="formulas__cards reveal">
-          <div className="formula-card">
+          <Link to="/cocktails-aperitifs" className="formula-card">
             <img className="formula-card__bg" src={IMG.aperitif} alt="Cocktail apéritif" />
             <div className="formula-card__overlay" />
             <div className="formula-card__content">
@@ -126,11 +126,11 @@ export default function Home() {
               <div className="formula-card__name">Cocktails<br />Apéritifs</div>
               <div className="formula-card__bottom">
                 <div className="formula-card__price">À partir de <strong>15€</strong></div>
-                <Link to="/cocktails-aperitifs" className="formula-card__btn">Découvrir</Link>
+                <span className="formula-card__btn">Découvrir</span>
               </div>
             </div>
-          </div>
-          <div className="formula-card">
+          </Link>
+          <Link to="/cocktails-dinatoires" className="formula-card">
             <img className="formula-card__bg" src={IMG.dinatoire} alt="Cocktail dînatoire" />
             <div className="formula-card__overlay" />
             <div className="formula-card__content">
@@ -138,10 +138,10 @@ export default function Home() {
               <div className="formula-card__name">Cocktails<br />Dînatoires</div>
               <div className="formula-card__bottom">
                 <div className="formula-card__price">À partir de <strong>26€</strong></div>
-                <Link to="/cocktails-dinatoires" className="formula-card__btn">Découvrir</Link>
+                <span className="formula-card__btn">Découvrir</span>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 

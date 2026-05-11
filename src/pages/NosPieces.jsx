@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../components/useReveal'
 import './NosPieces.css'
+import './Photos.css'
 
 const CATEGORIES = [
   { label: 'Salé', name: 'Canapés & Bouchées', desc: 'Créations de saison, renouvelées régulièrement pour une qualité constante.' },
@@ -20,6 +22,7 @@ const GALLERY = [
 
 export default function NosPieces() {
   const revealRef = useReveal()
+  const [lb, setLb] = useState(null)
 
   return (
     <div ref={revealRef}>
@@ -57,7 +60,7 @@ export default function NosPieces() {
           </div>
           <div className="pieces-grid reveal">
             {GALLERY.map((src, i) => (
-              <div key={i} className="pieces-grid__item">
+              <div key={i} className="pieces-grid__item photos-item" onClick={() => setLb(i)} style={{ cursor: 'pointer' }}>
                 <img src={src} alt={`Bouchée traiteur ${i + 1}`} loading="lazy" />
               </div>
             ))}
@@ -87,6 +90,16 @@ export default function NosPieces() {
           </p>
         </section>
       </div>
+
+      {lb !== null && (
+        <div className="lightbox" onClick={() => setLb(null)}>
+          <button className="lightbox__close" onClick={() => setLb(null)}>✕</button>
+          <button className="lightbox__prev" onClick={e => { e.stopPropagation(); setLb((lb - 1 + GALLERY.length) % GALLERY.length) }}>‹</button>
+          <img src={GALLERY[lb]} alt={`Bouchée traiteur ${lb + 1}`} onClick={e => e.stopPropagation()} />
+          <button className="lightbox__next" onClick={e => { e.stopPropagation(); setLb((lb + 1) % GALLERY.length) }}>›</button>
+          <div className="lightbox__counter">{lb + 1} / {GALLERY.length}</div>
+        </div>
+      )}
     </div>
   )
 }
